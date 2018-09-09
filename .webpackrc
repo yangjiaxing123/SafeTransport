@@ -1,0 +1,32 @@
+
+{
+  "theme": {
+    "@primary-color": "#dc6aac",
+    "@link-color": "#dc6aac",
+    "@border-radius-base": "2px",
+    "@font-size-base": "16px",
+    "@line-height-base": "1.2"
+  },
+  "disableCSSModules": true,
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:3003/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api" : "" }
+    }
+    ,
+    "/apia": {
+      "target": "http://jsonplaceholder.typicode.com/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/api" : "" }
+    },
+    "/dcore": {
+      "target": "https://as.decentfans.org/",
+      "changeOrigin": true,
+      "pathRewrite": { "^/dcore" : "hack/safetransport" }
+    }
+  },
+  "extraBabelPlugins": [
+    [ "import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+  ]
+}

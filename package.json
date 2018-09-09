@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "roadhog server",
+    "build": "roadhog build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "babel-plugin-import": "^1.7.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "dva": "^2.1.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "antd": "^3.5.4",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.0.1",
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "enzyme": "^3.3.0",
+    "eslint": "^4.14.0",
+    "eslint-config-umi": "^0.1.1",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "husky": "^0.12.0",
+    "jest": "^23.1.0",
+    "lodash": "^4.17.10",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.4.0",
+    "redbox-react": "^1.4.3",
+    "regenerator-runtime": "^0.11.1",
+    "roadhog": "^2.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mock/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/mock/styleMock.js"
+    }
+  }
+}
